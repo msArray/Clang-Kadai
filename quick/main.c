@@ -28,6 +28,7 @@ void quick(int a[], int left, int right){
     int pl = left;
     int pr = right;
     int x = a[(pl + pr) / 2];
+    printf("left:%d,right:%d\n",left, right);
 
     do {
         while (a[pl] < x) pl++;
