@@ -1,3 +1,5 @@
+use rand::Rng;
+
 fn partition<T>(slice: &mut [T]) -> Option<usize>
 where
     T:Ord,
@@ -90,7 +92,12 @@ fn quicksort_works() {
 }
 
 fn main(){
-    let mut v = vec![4, -1, 5, -2, 1];
+    let mut rng = rand::thread_rng();
+    let mut v: Vec<u8> = vec![];
+    for _i in 0..10{
+        v.push(rng.gen());
+    }
+
     sort(&mut v);
 
     for n in v.iter(){
